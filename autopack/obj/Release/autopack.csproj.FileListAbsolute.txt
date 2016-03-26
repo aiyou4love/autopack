@@ -1,0 +1,5 @@
+F:\autopack\autopack\autopack\bin\Release\autopack.exe
+F:\autopack\autopack\autopack\bin\Release\autopack.pdb
+F:\autopack\autopack\autopack\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\autopack\autopack\autopack\obj\Release\autopack.exe
+F:\autopack\autopack\autopack\obj\Release\autopack.pdb
