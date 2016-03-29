@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 namespace autopack
 {
     [Serializable]
-    class InitBundle : SerailizeXml
+    public class InitBundle : SerailizeXml
     {
         void runDelete(string nDirectory)
         {

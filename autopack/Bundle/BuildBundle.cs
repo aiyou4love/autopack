@@ -64,27 +64,10 @@ namespace autopack
             }
         }
 
-        void runLower(string nDirectory)
-        {
-            DirectoryInfo directoryInfo_ = new DirectoryInfo(nDirectory);
-            foreach (FileInfo fileInfo_ in directoryInfo_.GetFiles())
-            {
-                if (fileInfo_.Name != fileInfo_.Name.ToLower())
-                {
-                    string path_ = Path.Combine(nDirectory, fileInfo_.Name.ToLower());
-                    fileInfo_.MoveTo(path_);
-                }
-            }
-            foreach (DirectoryInfo suDirectory_ in directoryInfo_.GetDirectories())
-            {
-                runLower(suDirectory_.FullName);
-            }
-            Directory.Move(nDirectory, directoryInfo_.Name.ToLower());
-        }
-
         void runMd5(Bundle nBundle, VersionNo nVersionNo)
         {
             BundleInfo bundleInfo_ = new BundleInfo();
+            bundleInfo_.mMd5Infos = new SerializableDictionary<string, Md5Info>();
             foreach (CopyOnce i in mCopyOnces)
             {
                 i.runMd5(nBundle, bundleInfo_);
@@ -104,17 +87,13 @@ namespace autopack
             {
                 i.runCopy(nBundle);
             }
-            foreach (CopyOnce i in mCopyOnces)
-            {
-                i.runLower(nBundle);
-            }
             this.runMd5(nBundle, nVersionNo);
             this.runHeader(nBundle, nVersionNo);
         }
 
         void runApkModify(Bundle nBundle, VersionNo nVersionNo)
         {
-            string apk_ = nBundle.mDirectorys["apk"];
+            string apk_ = nBundle.mDirectorys["modify"];
             string apkMd5_ = nBundle.mDirectorys["md5File"];
             apkMd5_ += "_";
             apkMd5_ += nVersionNo.mApkNo;
@@ -124,7 +103,6 @@ namespace autopack
             {
                 i.runModify(nBundle, apkBundle_, apk_);
             }
-            this.runLower(apk_);
         }
 
         void runUpdateModify(Bundle nBundle, VersionNo nVersionNo)
@@ -143,7 +121,6 @@ namespace autopack
             {
                 i.runModify(nBundle, apkBundle_, update_);
             }
-            this.runLower(update_);
         }
 
         void runModify(Bundle nBundle, VersionNo nVersionNo)

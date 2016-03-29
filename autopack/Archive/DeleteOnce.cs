@@ -11,23 +11,29 @@ namespace autopack
     {
         void runDelete(string nDirectory)
         {
+            if (!Directory.Exists(nDirectory))
+            {
+                return;
+            }
             DirectoryInfo directoryInfo_ = new DirectoryInfo(nDirectory);
             foreach (FileInfo fileInfo_ in directoryInfo_.GetFiles())
             {
-                File.Delete(fileInfo_.FullName);
+                fileInfo_.Attributes = fileInfo_.Attributes & ~(FileAttributes.Archive | FileAttributes.ReadOnly | FileAttributes.Hidden);
+                fileInfo_.Delete();
             }
             foreach (DirectoryInfo suDirectoryInfo_ in directoryInfo_.GetDirectories())
             {
                 runDelete(suDirectoryInfo_.FullName);
             }
-            Directory.Delete(nDirectory);
+            directoryInfo_.Attributes = directoryInfo_.Attributes & ~(FileAttributes.Archive | FileAttributes.ReadOnly | FileAttributes.Hidden);
+            directoryInfo_.Delete();
         }
 
         public void runDelete(Bundle nBundle)
         {
             if (!(nBundle.mDirectorys.ContainsKey(mDirectory)))
             {
-                Console.WriteLine("mDirectorys key{0}", mDirectory);
+                Console.WriteLine("mDirectorys key:{0}", mDirectory);
                 Console.ReadKey(true);
                 return;
             }

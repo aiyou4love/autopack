@@ -44,7 +44,7 @@ namespace autopack
         {
             if (!(nBundle.mDirectorys.ContainsKey(mSourceDirectory)))
             {
-                Console.WriteLine("mDirectorys key{0}", mSourceDirectory);
+                Console.WriteLine("mDirectorys key:{0}", mSourceDirectory);
                 Console.ReadKey(true);
                 return;
             }

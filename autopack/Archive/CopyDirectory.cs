@@ -79,7 +79,7 @@ namespace autopack
                 }
                 if (isFileModify(fileInfo_, nkey, nBundleInfo))
                 {
-                    string path_ = Path.Combine(nDirectory, fileInfo_.Name);
+                    string path_ = Path.Combine(nDirectory, fileInfo_.Name.ToLower());
                     File.Copy(fileInfo_.FullName, path_);
                 }
             }
@@ -88,7 +88,7 @@ namespace autopack
                 string key_ = Path.Combine(nkey, suDirectory_.Name);
                 if (this.isDirectoryModify(suDirectory_.FullName, key_, nBundleInfo))
                 {
-                    string dest_ = Path.Combine(nDirectory, suDirectory_.Name);
+                    string dest_ = Path.Combine(nDirectory, suDirectory_.Name.ToLower());
                     Directory.CreateDirectory(dest_);
                     runDirectoryModify(suDirectory_.FullName, key_, dest_, nBundleInfo);
                 }
@@ -162,12 +162,12 @@ namespace autopack
                 {
                     continue;
                 }
-                string path_ = Path.Combine(nDestDirectory, fileInfo_.Name);
+                string path_ = Path.Combine(nDestDirectory, fileInfo_.Name.ToLower());
                 File.Copy(fileInfo_.FullName, path_);
             }
             foreach (DirectoryInfo suDirectory_ in directoryInfo_.GetDirectories())
             {
-                string path_ = Path.Combine(nDestDirectory, suDirectory_.Name);
+                string path_ = Path.Combine(nDestDirectory, suDirectory_.Name.ToLower());
                 copyDirectory(suDirectory_.FullName, path_);
             }
         }

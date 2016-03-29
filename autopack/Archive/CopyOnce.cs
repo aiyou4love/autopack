@@ -9,41 +9,11 @@ namespace autopack
     [Serializable]
     public class CopyOnce
     {
-        void runLower(string nDirectory)
-        {
-            DirectoryInfo directoryInfo_ = new DirectoryInfo(nDirectory);
-            foreach (FileInfo fileInfo_ in directoryInfo_.GetFiles())
-            {
-                if (fileInfo_.Name != fileInfo_.Name.ToLower())
-                {
-                    string path_ = Path.Combine(nDirectory, fileInfo_.Name.ToLower());
-                    fileInfo_.MoveTo(path_);
-                }
-            }
-            foreach (DirectoryInfo suDirectory_ in directoryInfo_.GetDirectories())
-            {
-                runLower(suDirectory_.FullName);
-            }
-            Directory.Move(nDirectory, directoryInfo_.Name.ToLower());
-        }
-
-        public void runLower(Bundle nBundle)
-        {
-            if (!(nBundle.mDirectorys.ContainsKey(mDestDirectory)))
-            {
-                Console.WriteLine("mDirectorys key{0}", mDestDirectory);
-                Console.ReadKey(true);
-                return;
-            }
-            string destDirectory_ = nBundle.mDirectorys[mDestDirectory];
-            this.runLower(destDirectory_);
-        }
-
         public void runModify(Bundle nBundle, BundleInfo nBundleInfo, string nDirectory)
         {
             if (!(nBundle.mDirectorys.ContainsKey(mSourceDirectory)))
             {
-                Console.WriteLine("mDirectorys key{0}", mSourceDirectory);
+                Console.WriteLine("mDirectorys key:{0}", mSourceDirectory);
                 Console.ReadKey(true);
                 return;
             }
@@ -63,7 +33,7 @@ namespace autopack
         {
             if (!(nBundle.mDirectorys.ContainsKey(mSourceDirectory)))
             {
-                Console.WriteLine("mDirectorys key{0}", mSourceDirectory);
+                Console.WriteLine("mDirectorys key:{0}", mSourceDirectory);
                 Console.ReadKey(true);
                 return;
             }
@@ -83,7 +53,7 @@ namespace autopack
         {
             if (!(nBundle.mDirectorys.ContainsKey(mDestDirectory)))
             {
-                Console.WriteLine("mDirectorys key{0}", mDestDirectory);
+                Console.WriteLine("mDirectorys key:{0}", mDestDirectory);
                 Console.ReadKey(true);
                 return;
             }
@@ -91,7 +61,7 @@ namespace autopack
 
             if (!(nBundle.mDirectorys.ContainsKey(mSourceDirectory)))
             {
-                Console.WriteLine("mDirectorys key{0}", mSourceDirectory);
+                Console.WriteLine("mDirectorys key:{0}", mSourceDirectory);
                 Console.ReadKey(true);
                 return;
             }
