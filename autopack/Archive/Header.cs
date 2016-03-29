@@ -15,5 +15,7 @@ namespace autopack
         public string mType { get; set; }
 
         public string mNo { get; set; }
+
+        public string mFile { get; set; }
     }
 }

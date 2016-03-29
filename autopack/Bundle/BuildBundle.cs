@@ -13,49 +13,58 @@ namespace autopack
     {
         public void runHeader(Bundle nBundle, VersionNo nVersionNo)
         {
+            foreach (Header i in mHeaders)
+            {
+                this.runHeader(nBundle, nVersionNo, i);
+            }
+        }
+
+        void runHeader(Bundle nBundle, VersionNo nVersionNo, Header nHeader)
+        {
             string directory_ = nBundle.mDirectorys["header"];
-            if (mHeader.mLanguage == "java")
+            directory_ = Path.Combine(directory_, nHeader.mFile);
+            if (nHeader.mLanguage == "java")
             {
                 nVersionNo.mApkNo++;
                 nVersionNo.mUpdateNo = 0;
-                string value_ = mHeader.mPackage + "\r\npublic class APKVERSION {\r\n  public static final int NO = ";
+                string value_ = nHeader.mPackage + "\r\npublic class APKVERSION {\r\n  public static final int NO = ";
                 value_ += nVersionNo.mApkNo;
                 value_ += ";\r\n  public static final int P = ";
-                value_ += mHeader.mNo;
+                value_ += nHeader.mNo;
                 value_ += ";\r\n  public static final int V = ";
-                value_ += mHeader.mType;
+                value_ += nHeader.mType;
                 value_ += ";\r\n}\r\n";
                 FileInfo fileInfo_ = new FileInfo(directory_);
                 StreamWriter streamWriter_ = fileInfo_.CreateText();
                 streamWriter_.Write(value_);
                 streamWriter_.Close();
             }
-            else if (mHeader.mLanguage == "objective-c")
+            else if (nHeader.mLanguage == "objective-c")
             {
                 nVersionNo.mApkNo++;
                 nVersionNo.mUpdateNo = 0;
                 string value_ = "\r\n#define APKMIN ";
                 value_ += nVersionNo.mApkNo;
                 value_ += "\r\n#define P ";
-                value_ += mHeader.mNo;
+                value_ += nHeader.mNo;
                 value_ += "\r\n#define V ";
-                value_ += mHeader.mType;
+                value_ += nHeader.mType;
                 value_ += "\r\n";
                 FileInfo fileInfo_ = new FileInfo(directory_);
                 StreamWriter streamWriter_ = fileInfo_.CreateText();
                 streamWriter_.Write(value_);
                 streamWriter_.Close();
             }
-            else if (mHeader.mLanguage == "c++")
+            else if (nHeader.mLanguage == "c++")
             {
                 nVersionNo.mApkNo++;
                 nVersionNo.mUpdateNo = 0;
                 string value_ = "#pragma once\r\n\r\n#define APKMIN ";
                 value_ += nVersionNo.mApkNo;
                 value_ += "\r\n#define PACKAGENO ";
-                value_ += mHeader.mNo;
+                value_ += nHeader.mNo;
                 value_ += "\r\n#define PACKAGETYPE ";
-                value_ += mHeader.mType;
+                value_ += nHeader.mType;
                 value_ += "\r\n";
                 FileInfo fileInfo_ = new FileInfo(directory_);
                 StreamWriter streamWriter_ = fileInfo_.CreateText();
@@ -153,6 +162,6 @@ namespace autopack
 
         public List<CopyOnce> mCopyOnces { get; set; }
 
-        public Header mHeader { get; set; }
+        public List<Header> mHeaders { get; set; }
     }
 }
