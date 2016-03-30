@@ -25,7 +25,6 @@ namespace autopack
             directory_ = Path.Combine(directory_, nHeader.mFile);
             if (nHeader.mLanguage == "java")
             {
-                nVersionNo.mApkNo++;
                 nVersionNo.mUpdateNo = 0;
                 string value_ = nHeader.mPackage + "\r\npublic class APKVERSION {\r\n  public static final int NO = ";
                 value_ += nVersionNo.mApkNo;
@@ -41,7 +40,6 @@ namespace autopack
             }
             else if (nHeader.mLanguage == "objective-c")
             {
-                nVersionNo.mApkNo++;
                 nVersionNo.mUpdateNo = 0;
                 string value_ = "\r\n#define APKMIN ";
                 value_ += nVersionNo.mApkNo;
@@ -57,7 +55,6 @@ namespace autopack
             }
             else if (nHeader.mLanguage == "c++")
             {
-                nVersionNo.mApkNo++;
                 nVersionNo.mUpdateNo = 0;
                 string value_ = "#pragma once\r\n\r\n#define APKMIN ";
                 value_ += nVersionNo.mApkNo;

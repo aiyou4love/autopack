@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Archive\CheckNameOnce.cs" />
+    <Compile Include="Archive\ClearDirectory.cs" />
     <Compile Include="Archive\CopyOnce.cs" />
     <Compile Include="Archive\CopyFile.cs" />
     <Compile Include="Archive\CopyDirectory.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Archive\Header.cs" />
     <Compile Include="Archive\SZipDirectory.cs" />
     <Compile Include="Archive\ZipOnce.cs" />
+    <Compile Include="Bundle\BuildPackage.cs" />
     <Compile Include="Bundle\FinishBundle.cs" />
     <Compile Include="Command\ApkCommand.cs" />
     <Compile Include="Bundle\BuildBundle.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="Bundle\Bundle.cs" />
     <Compile Include="Bundle\Md5Info.cs" />
     <Compile Include="Command\AbstractCommand.cs" />
+    <Compile Include="Command\BuildCommand.cs" />
     <Compile Include="Command\FinishCommand.cs" />
     <Compile Include="Command\SerailizeXml.cs" />
     <Compile Include="Command\UpdateCommand.cs" />

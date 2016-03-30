@@ -39,6 +39,11 @@ namespace autopack
                 UpdateCommand updateCommand_ = Deserialize<UpdateCommand>(args[1]);
                 updateCommand_.runCommand(args[2]);
             }
+            else if ("-b" == args[0])
+            {
+                BuildCommand buildCommand_ = Deserialize<BuildCommand>(args[1]);
+                buildCommand_.runCommand(args[2]);
+            }
             else if ("-f" == args[0])
             {
                 FinishCommand finishCommand_ = Deserialize<FinishCommand>(args[1]);

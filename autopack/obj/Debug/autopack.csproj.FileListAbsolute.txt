@@ -3,8 +3,3 @@ F:\autopack\autopack\autopack\bin\Debug\autopack.pdb
 F:\autopack\autopack\autopack\obj\Debug\autopack.exe
 F:\autopack\autopack\autopack\obj\Debug\autopack.pdb
 F:\autopack\autopack\autopack\bin\Debug\ICSharpCode.SharpZipLib.dll
-E:\autopack\autopack\bin\Debug\autopack.exe
-E:\autopack\autopack\bin\Debug\autopack.pdb
-E:\autopack\autopack\bin\Debug\ICSharpCode.SharpZipLib.dll
-E:\autopack\autopack\obj\Debug\autopack.exe
-E:\autopack\autopack\obj\Debug\autopack.pdb

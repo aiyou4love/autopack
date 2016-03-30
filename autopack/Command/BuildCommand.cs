@@ -6,14 +6,14 @@ using System.Text;
 namespace autopack
 {
     [Serializable]
-    class FinishCommand : AbstractCommand
+    public class BuildCommand : AbstractCommand
     {
         public override void runCommand(string nBundleXml)
         {
             Bundle bundle_ = Deserialize<Bundle>(nBundleXml);
-            string finishBundleXml_ = bundle_.mDirectorys[mDirectory];
-            FinishBundle finishBundle = Deserialize<FinishBundle>(finishBundleXml_);
-            finishBundle.runCommand(bundle_);
+            string buildPackageXml_ = bundle_.mDirectorys[mDirectory];
+            BuildPackage buildPackage_ = Deserialize<BuildPackage>(buildPackageXml_);
+            buildPackage_.runCommand(bundle_);
         }
 
         public string mDirectory { get; set; }
