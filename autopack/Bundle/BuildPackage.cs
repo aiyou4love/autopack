@@ -6,7 +6,7 @@ using System.Text;
 namespace autopack
 {
     [Serializable]
-    class BuildPackage : SerailizeXml
+    public class BuildPackage : SerailizeXml
     {
         public void runCommand(Bundle nBundle)
         {
