@@ -24,7 +24,7 @@ namespace autopack
             Directory.Delete(nDirectory);
         }
 
-        void runInit(Bundle nBundle)
+        void runInitApk(Bundle nBundle)
         {
             string apk_ = nBundle.mDirectorys["apk"];
             if (Directory.Exists(apk_))
@@ -32,13 +32,23 @@ namespace autopack
                 this.runDelete(apk_);
             }
             Directory.CreateDirectory(apk_);
+        }
 
+        void runModifyApk(Bundle nBundle)
+        {
             string update_ = nBundle.mDirectorys["update"];
             if (Directory.Exists(update_))
             {
                 this.runDelete(update_);
             }
             Directory.CreateDirectory(update_);
+
+            string modify_ = nBundle.mDirectorys["modify"];
+            if (Directory.Exists(modify_))
+            {
+                this.runDelete(modify_);
+            }
+            Directory.CreateDirectory(modify_);
         }
 
         public void runCommand(string nCommand, Bundle nBundle)
@@ -50,14 +60,17 @@ namespace autopack
             {
                 i.runDelete(nBundle);
             }
+
             if ("apk" == nCommand)
             {
                 versionNo_.mApkNo += 1;
                 versionNo_.mUpdateNo = 1;
+                this.runInitApk(nBundle);
             }
             else if ("update" == nCommand)
             {
                 versionNo_.mUpdateNo += 1;
+                this.runModifyApk(nBundle);
             }
             Serialize<VersionNo>(versionNoXml_, versionNo_);
         }
