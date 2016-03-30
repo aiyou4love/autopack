@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Archive\CheckNameOnce.cs" />
-    <Compile Include="Archive\ClearDirectory.cs" />
     <Compile Include="Archive\CopyOnce.cs" />
     <Compile Include="Archive\CopyFile.cs" />
     <Compile Include="Archive\CopyDirectory.cs" />
