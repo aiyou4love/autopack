@@ -25,9 +25,6 @@ namespace autopack
             {
                 i.runZip(nBundle);
             }
-
-            Console.WriteLine("APK:{0} UPDATE:{1}", versionNo_.mApkNo, versionNo_.mUpdateNo);
-            Console.ReadKey(true);
         }
 
         public List<CopyOnce> mCopyOnces { get; set; }

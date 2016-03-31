@@ -64,6 +64,7 @@
     <Compile Include="Command\AbstractCommand.cs" />
     <Compile Include="Command\BuildCommand.cs" />
     <Compile Include="Command\FinishCommand.cs" />
+    <Compile Include="Command\PrintCommand.cs" />
     <Compile Include="Command\SerailizeXml.cs" />
     <Compile Include="Command\UpdateCommand.cs" />
     <Compile Include="Program.cs" />

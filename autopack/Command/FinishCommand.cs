@@ -6,7 +6,7 @@ using System.Text;
 namespace autopack
 {
     [Serializable]
-    class FinishCommand : AbstractCommand
+    public class FinishCommand : AbstractCommand
     {
         public override void runCommand(string nBundleXml)
         {

@@ -53,9 +53,12 @@ namespace autopack
             foreach (string i in mClearFiles)
             {
                 string directory_ = nBundle.mDirectorys[i];
-                FileInfo fileInfo_ = new FileInfo(directory_);
-                fileInfo_.Attributes = fileInfo_.Attributes & ~(FileAttributes.Archive | FileAttributes.ReadOnly | FileAttributes.Hidden);
-                fileInfo_.Delete();
+                if (File.Exists(directory_))
+                {
+                    FileInfo fileInfo_ = new FileInfo(directory_);
+                    fileInfo_.Attributes = fileInfo_.Attributes & ~(FileAttributes.Archive | FileAttributes.ReadOnly | FileAttributes.Hidden);
+                    fileInfo_.Delete();
+                }
             }
 
             foreach (string i in mClearDirectorys)
