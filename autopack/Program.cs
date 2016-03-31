@@ -49,6 +49,11 @@ namespace autopack
                 FinishCommand finishCommand_ = Deserialize<FinishCommand>(args[1]);
                 finishCommand_.runCommand(args[2]);
             }
+            else if ("-z" == args[0])
+            {
+                ZipCommand zipCommand_ = Deserialize<ZipCommand>(args[1]);
+                zipCommand_.runCommand(args[2]);
+            }
             else if ("-p" == args[0])
             {
                 PrintCommand printCommand_ = Deserialize<PrintCommand>(args[1]);

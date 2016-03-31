@@ -52,6 +52,7 @@
     <Compile Include="Archive\DeleteOnce.cs" />
     <Compile Include="Archive\Header.cs" />
     <Compile Include="Archive\SZipDirectory.cs" />
+    <Compile Include="Archive\ZipIfOnce.cs" />
     <Compile Include="Archive\ZipOnce.cs" />
     <Compile Include="Bundle\BuildPackage.cs" />
     <Compile Include="Bundle\FinishBundle.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Command\PrintCommand.cs" />
     <Compile Include="Command\SerailizeXml.cs" />
     <Compile Include="Command\UpdateCommand.cs" />
+    <Compile Include="Command\ZipCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialize\SerializableDictionary.cs" />
