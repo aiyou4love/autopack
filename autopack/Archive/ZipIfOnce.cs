@@ -27,26 +27,16 @@ namespace autopack
 
         public void runZip(Bundle nBundle)
         {
-            bool zip_ = false;
-            foreach (string i in mIfDirectorys)
+            bool isExists = false;
+            foreach (IfFile i in mIfFiles)
             {
-                string directory_ = nBundle.mDirectorys[i];
-                if (Directory.Exists(directory_))
+                if (i.isExists(nBundle))
                 {
-                    zip_ = true;
+                    isExists = true;
                     break;
                 }
             }
-            foreach (string i in mIfFiles)
-            {
-                string directory_ = nBundle.mDirectorys[i];
-                if (File.Exists(directory_))
-                {
-                    zip_ = true;
-                    break;
-                }
-            }
-            if (!zip_) return;
+            if (!isExists) return;
             if (!(nBundle.mDirectorys.ContainsKey(mDestDirectory)))
             {
                 Console.WriteLine("mDirectorys key:{0}", mDestDirectory);
@@ -74,9 +64,7 @@ namespace autopack
             }
         }
 
-        public List<string> mIfDirectorys { get; set; }
-
-        public List<string> mIfFiles { get; set; }
+        public List<IfFile> mIfFiles { get; set; }
 
         public List<SZipDirectory> mZipDirectorys { get; set; }
 

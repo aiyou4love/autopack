@@ -51,6 +51,7 @@
     <Compile Include="Archive\CopyDirectory.cs" />
     <Compile Include="Archive\DeleteOnce.cs" />
     <Compile Include="Archive\Header.cs" />
+    <Compile Include="Archive\IfFile.cs" />
     <Compile Include="Archive\SZipDirectory.cs" />
     <Compile Include="Archive\ZipIfOnce.cs" />
     <Compile Include="Archive\ZipOnce.cs" />
