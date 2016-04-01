@@ -120,7 +120,6 @@ namespace autopack
             updateMd5_ += "_";
             updateMd5_ += (nVersionNo.mUpdateNo - 1);
             updateMd5_ += ".xml";
-            BundleInfo updateBundle_ = Deserialize<BundleInfo>(updateMd5_);
 
             BundleInfo apkBundle_ = Deserialize<BundleInfo>(updateMd5_);
             foreach (CopyOnce i in mCopyOnces)

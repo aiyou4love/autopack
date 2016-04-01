@@ -10,9 +10,6 @@ namespace autopack
     {
         public void runCommand(Bundle nBundle)
         {
-            string versionNoXml_ = nBundle.mDirectorys["versionNo"];
-            VersionNo versionNo_ = Deserialize<VersionNo>(versionNoXml_);
-
             foreach (CopyOnce i in mCopyOnces)
             {
                 i.runCopy(nBundle);

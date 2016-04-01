@@ -8,4 +8,3 @@ E:\autopack\autopack\bin\Release\autopack.pdb
 E:\autopack\autopack\bin\Release\ICSharpCode.SharpZipLib.dll
 E:\autopack\autopack\obj\Release\autopack.exe
 E:\autopack\autopack\obj\Release\autopack.pdb
-E:\autopack\autopack\obj\Release\autopack.csprojResolveAssemblyReference.cache
