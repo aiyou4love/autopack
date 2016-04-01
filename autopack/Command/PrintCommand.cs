@@ -15,7 +15,6 @@ namespace autopack
             VersionNo versionNo_ = Deserialize<VersionNo>(versionNoXml_);
 
             Console.WriteLine("APK:{0} UPDATE:{1}", versionNo_.mApkNo, versionNo_.mUpdateNo);
-            Console.ReadKey(true);
         }
     }
 }
