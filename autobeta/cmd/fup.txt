@@ -1,0 +1,3 @@
+cd ~/Desktop/autobeta
+chmod +x *.sh
+./fup.sh

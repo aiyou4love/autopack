@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<FinishBundle>
+  <mCopyOnces />
+  <mDeleteOnces />
+  <mZipOnces>
+    <ZipOnce>
+	  <mZipDirectorys>
+	    <SZipDirectory>
+		  <mSourceDirectory>chapter003</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	  </mZipDirectorys>
+	  <mZipFiles />
+	  <mZipFile>gsoft-hero-v1.zip</mZipFile>
+	  <mDestDirectory>apk</mDestDirectory>
+	</ZipOnce>
+    <ZipOnce>
+	  <mZipDirectorys>
+	    <SZipDirectory>
+		  <mSourceDirectory>chapter004</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	  </mZipDirectorys>
+	  <mZipFiles />
+	  <mZipFile>gsoft-other1-v1.zip</mZipFile>
+	  <mDestDirectory>apk</mDestDirectory>
+	</ZipOnce>
+    <ZipOnce>
+	  <mZipDirectorys>
+	    <SZipDirectory>
+		  <mSourceDirectory>chapter005</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	  </mZipDirectorys>
+	  <mZipFiles />
+	  <mZipFile>gsoft-other2-v1.zip</mZipFile>
+	  <mDestDirectory>apk</mDestDirectory>
+	</ZipOnce>
+    <ZipOnce>
+	  <mZipDirectorys>
+	    <SZipDirectory>
+		  <mSourceDirectory>interscene01</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	    <SZipDirectory>
+		  <mSourceDirectory>chapter002</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	  </mZipDirectorys>
+	  <mZipFiles />
+	  <mZipFile>gsoft-other-v1.zip</mZipFile>
+	  <mDestDirectory>apk</mDestDirectory>
+	</ZipOnce>
+  </mZipOnces>
+</FinishBundle>

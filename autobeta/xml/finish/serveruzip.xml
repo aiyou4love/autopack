@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<FinishBundle>
+  <mCopyOnces>
+    <CopyOnce>
+	  <mCopyDirectorys>
+	    <CopyDirectory>
+	      <mSourceDirectory>chapter001</mSourceDirectory>
+	      <mDestDirectory>chapter001</mDestDirectory>
+	      <mWithouts/>
+		</CopyDirectory>
+	    <CopyDirectory>
+	      <mSourceDirectory>local</mSourceDirectory>
+	      <mDestDirectory>local</mDestDirectory>
+	      <mWithouts/>
+		</CopyDirectory>
+	    <CopyDirectory>
+	      <mSourceDirectory>script</mSourceDirectory>
+	      <mDestDirectory>script</mDestDirectory>
+	      <mWithouts/>
+		</CopyDirectory>
+	  </mCopyDirectorys>
+	  <mCopyFiles />
+	  <mDestDirectory>serverudir</mDestDirectory>
+	  <mSourceDirectory>bin</mSourceDirectory>
+	</CopyOnce>
+    <CopyOnce>
+	  <mCopyDirectorys />
+	  <mCopyFiles>
+	    <CopyFile>
+	      <mSourceFile>andiochat_server.exe</mSourceFile>
+	      <mDestFile>andiochat_server.exe</mDestFile>
+		</CopyFile>
+	    <CopyFile>
+	      <mSourceFile>dbs.exe</mSourceFile>
+	      <mDestFile>dbs.exe</mDestFile>
+		</CopyFile>
+	    <CopyFile>
+	      <mSourceFile>game_server.exe</mSourceFile>
+	      <mDestFile>game_server.exe</mDestFile>
+		</CopyFile>
+	    <CopyFile>
+	      <mSourceFile>gate_server.exe</mSourceFile>
+	      <mDestFile>gate_server.exe</mDestFile>
+		</CopyFile>
+	    <CopyFile>
+	      <mSourceFile>main_server.exe</mSourceFile>
+	      <mDestFile>main_server.exe</mDestFile>
+		</CopyFile>
+	  </mCopyFiles>
+	  <mDestDirectory>serverudir</mDestDirectory>
+	  <mSourceDirectory>exe</mSourceDirectory>
+	</CopyOnce>
+  </mCopyOnces>
+  <mDeleteOnces>
+    <DeleteOnce>
+	  <mDeleteDirectorys>
+	    <string>chapter001\actor</string>
+	    <string>chapter001\texture</string>
+	  </mDeleteDirectorys>
+	  <mDeleteFiles />
+	  <mDirectory>serverudir</mDirectory>
+	</DeleteOnce>
+  </mDeleteOnces>
+  <mZipOnces>
+    <ZipOnce>
+	  <mZipDirectorys>
+	    <SZipDirectory>
+		  <mSourceDirectory>server</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	  </mZipDirectorys>
+	  <mZipFiles />
+	  <mZipFile>server.zip</mZipFile>
+	  <mDestDirectory>modify</mDestDirectory>
+	</ZipOnce>
+  </mZipOnces>
+</FinishBundle>

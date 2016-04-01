@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<InitBundle>
+  <mDeleteOnces>
+    <DeleteOnce>
+	  <mDeleteDirectorys>
+	    <string>apk</string>
+	    <string>modify</string>
+	    <string>update</string>
+	  </mDeleteDirectorys>
+	  <mDeleteFiles />
+	  <mDirectory>autopack</mDirectory>
+	</DeleteOnce>
+  </mDeleteOnces>
+</InitBundle>

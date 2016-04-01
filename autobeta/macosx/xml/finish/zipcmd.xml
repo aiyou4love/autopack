@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<ZipCommand>
+  <mZipIfOnces>
+    <ZipIfOnce>
+	  <mIfFiles>
+	    <IfFile>
+		  <mIfDirectorys />
+		  <mIfFiles>
+		    <string>libclient.so</string>
+		  </mIfFiles>
+		  <mDirectory>update</mDirectory>
+		</IfFile>
+	  </mIfFiles>
+	  <mZipDirectorys />
+	  <mZipFiles>
+	    <string>libclient.so</string>
+	  </mZipFiles>
+	  <mZipFile>gsoft-so-v1.zip</mZipFile>
+	  <mDestDirectory>modify</mDestDirectory>
+	</ZipIfOnce>
+    <ZipIfOnce>
+	  <mIfFiles>
+	    <IfFile>
+		  <mIfDirectorys>
+		    <string>font</string>
+		    <string>android_effect</string>
+		    <string>interface</string>
+		    <string>ui</string>
+		    <string>local</string>
+		    <string>script</string>
+		  </mIfDirectorys>
+		  <mIfFiles>
+		    <string>client_engine.ini</string>
+	        <string>client_info.ini</string>
+	        <string>client_user.ini</string>
+	        <string>targetpacket.csv</string>
+		  </mIfFiles>
+		  <mDirectory>update</mDirectory>
+		</IfFile>
+	  </mIfFiles>
+	  <mZipDirectorys>
+	    <SZipDirectory>
+		  <mSourceDirectory>font</mSourceDirectory>
+		  <mSourceDirectory>android_effect</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	  </mZipDirectorys>
+	  <mZipFiles>
+	    <string>game_1.dat</string>
+	    <string>client_engine.ini</string>
+	    <string>client_info.ini</string>
+	    <string>client_user.ini</string>
+	    <string>targetpacket.csv</string>
+	  </mZipFiles>
+	  <mZipFile>gsoft-table-v1.zip</mZipFile>
+	  <mDestDirectory>modify</mDestDirectory>
+	</ZipIfOnce>
+    <ZipIfOnce>
+	  <mIfFiles>
+	    <IfFile>
+		  <mIfDirectorys>
+		    <string>sound</string>
+		  </mIfDirectorys>
+		  <mIfFiles />
+		  <mDirectory>update</mDirectory>
+		</IfFile>
+	  </mIfFiles>
+	  <mZipDirectorys>
+	    <SZipDirectory>
+		  <mSourceDirectory>sound</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	  </mZipDirectorys>
+	  <mZipFiles />
+	  <mZipFile>gsoft-sound-v1.zip</mZipFile>
+	  <mDestDirectory>modify</mDestDirectory>
+	</ZipIfOnce>
+    <ZipIfOnce>
+	  <mIfFiles>
+	    <IfFile>
+		  <mIfDirectorys>
+		    <string>chapter001</string>
+		    <string>chapter002</string>
+		    <string>chapter003</string>
+		    <string>chapter004</string>
+		    <string>chapter005</string>
+		  </mIfDirectorys>
+		  <mIfFiles />
+		  <mDirectory>update</mDirectory>
+		</IfFile>
+	  </mIfFiles>
+	  <mZipDirectorys>
+	    <SZipDirectory>
+		  <mSourceDirectory>chapter001</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	    <SZipDirectory>
+		  <mSourceDirectory>chapter002</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	    <SZipDirectory>
+		  <mSourceDirectory>chapter003</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	    <SZipDirectory>
+		  <mSourceDirectory>chapter004</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	    <SZipDirectory>
+		  <mSourceDirectory>chapter005</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	  </mZipDirectorys>
+	  <mZipFiles />
+	  <mZipFile>gsoft-map-v1.zip</mZipFile>
+	  <mDestDirectory>modify</mDestDirectory>
+	</ZipIfOnce>
+    <ZipIfOnce>
+	  <mIfFiles>
+	    <IfFile>
+		  <mIfDirectorys>
+		    <string>interscene</string>
+		    <string>interscene01</string>
+		  </mIfDirectorys>
+		  <mIfFiles />
+		  <mDirectory>update</mDirectory>
+		</IfFile>
+	  </mIfFiles>
+	  <mZipDirectorys>
+	    <SZipDirectory>
+		  <mSourceDirectory>interscene</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	    <SZipDirectory>
+		  <mSourceDirectory>interscene01</mSourceDirectory>
+		  <mWithouts />
+		</SZipDirectory>
+	  </mZipDirectorys>
+	  <mZipFiles />
+	  <mZipFile>gsoft-texture-v1.zip</mZipFile>
+	  <mDestDirectory>modify</mDestDirectory>
+	</ZipIfOnce>
+  </mZipIfOnces>
+</ZipCommand>
+
