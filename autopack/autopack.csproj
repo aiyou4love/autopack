@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Excel">
+      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net20\Excel.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
@@ -57,6 +60,7 @@
     <Compile Include="Archive\ZipOnce.cs" />
     <Compile Include="Bundle\BuildPackage.cs" />
     <Compile Include="Bundle\FinishBundle.cs" />
+    <Compile Include="Bundle\TableRow.cs" />
     <Compile Include="Command\ApkCommand.cs" />
     <Compile Include="Bundle\BuildBundle.cs" />
     <Compile Include="Bundle\BundleInfo.cs" />
@@ -65,6 +69,7 @@
     <Compile Include="Bundle\Md5Info.cs" />
     <Compile Include="Command\AbstractCommand.cs" />
     <Compile Include="Command\BuildCommand.cs" />
+    <Compile Include="Command\Excel2JsonCommand.cs" />
     <Compile Include="Command\FinishCommand.cs" />
     <Compile Include="Command\PrintCommand.cs" />
     <Compile Include="Command\SerailizeXml.cs" />
