@@ -13,7 +13,7 @@ namespace autopack
         {
             if (!(nBundle.mDirectorys.ContainsKey(mSourceDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mSourceDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mSourceDirectory, "CopyOnce::runModify");
                 Console.ReadKey(true);
                 return;
             }
@@ -33,7 +33,7 @@ namespace autopack
         {
             if (!(nBundle.mDirectorys.ContainsKey(mSourceDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mSourceDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mSourceDirectory, "CopyOnce::runMd5");
                 Console.ReadKey(true);
                 return;
             }
@@ -53,7 +53,7 @@ namespace autopack
         {
             if (!(nBundle.mDirectorys.ContainsKey(mDestDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mDestDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mDestDirectory, "CopyOnce::runCopy");
                 Console.ReadKey(true);
                 return;
             }
@@ -61,7 +61,7 @@ namespace autopack
 
             if (!(nBundle.mDirectorys.ContainsKey(mSourceDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mSourceDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mSourceDirectory);
                 Console.ReadKey(true);
                 return;
             }

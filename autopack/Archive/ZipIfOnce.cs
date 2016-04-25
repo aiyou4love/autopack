@@ -39,7 +39,7 @@ namespace autopack
             if (!isExists) return;
             if (!(nBundle.mDirectorys.ContainsKey(mDestDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mDestDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mDestDirectory, "ZipIfOnce::runZip");
                 Console.ReadKey(true);
                 return;
             }

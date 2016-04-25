@@ -33,7 +33,7 @@ namespace autopack
         {
             if (!(nBundle.mDirectorys.ContainsKey(mDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mDirectory, "DeleteOnce::runDelete");
                 Console.ReadKey(true);
                 return;
             }

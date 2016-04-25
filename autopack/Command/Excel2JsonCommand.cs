@@ -44,8 +44,8 @@ namespace autopack
                         }
                     }
                     string fieldName_ = j.ToString();
-                    if (!string.IsNullOrEmpty(fieldName_))
-                        rowData[fieldName_] = value_;
+                    //if (!string.IsNullOrEmpty(fieldName_))
+                    //    rowData[fieldName_] = value_;
                 }
             }
         }
@@ -66,7 +66,7 @@ namespace autopack
             Bundle bundle_ = Deserialize<Bundle>(nBundleXml);
             if (!(bundle_.mDirectorys.ContainsKey(mSourceDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mSourceDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mSourceDirectory, "Excel2JsonCommand::runCommand");
                 Console.ReadKey(true);
                 return;
             }
@@ -74,7 +74,7 @@ namespace autopack
 
             if (!(bundle_.mDirectorys.ContainsKey(mDestDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mDestDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mDestDirectory, "Excel2JsonCommand::runCommand");
                 Console.ReadKey(true);
                 return;
             }

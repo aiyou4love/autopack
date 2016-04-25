@@ -13,7 +13,7 @@ namespace autopack
         {
             if (!(nBundle.mDirectorys.ContainsKey(mDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mDirectory, "IfFile::isExists");
                 Console.ReadKey(true);
                 return false;
             }

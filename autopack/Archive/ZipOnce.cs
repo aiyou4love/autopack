@@ -29,7 +29,7 @@ namespace autopack
         {
             if (!(nBundle.mDirectorys.ContainsKey(mDestDirectory)))
             {
-                Console.WriteLine("mDirectorys key:{0}", mDestDirectory);
+                Console.WriteLine("mDirectorys key:{0},{1}", mDestDirectory, "ZipOnce::runZip");
                 Console.ReadKey(true);
                 return;
             }
